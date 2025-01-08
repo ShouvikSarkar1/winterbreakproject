@@ -9,8 +9,8 @@ body {
   grid-template-columns: 250px 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-      "sidebar header announcement"
-      "sidebar main trending";
+    "sidebar header announcement"
+    "sidebar main trending";
   height: 100vh;
 }
 
@@ -50,21 +50,29 @@ body {
   gap: 10px;
 }
 
- /* Header Container */
-.header {
-  grid-area: header; 
+/* Header Container */
+
+.header-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   position: sticky;
-  top: 0; 
+  top: 0;
   z-index: 10;
 }
-
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top i {
+  display: flex;
+  padding-right: 15px;
+}
 /* Search Bar */
 .search-bar {
   display: flex;
@@ -72,8 +80,8 @@ body {
   background-color: #f1f3f4;
   border-radius: 20px;
   padding: 5px 15px;
-  flex: 1; 
-  max-width: 65rem;
+  flex: 1;
+  max-width: 90rem;
 }
 
 .search-bar input {
@@ -88,17 +96,64 @@ body {
 .search-bar i {
   color: #888;
 }
-
-/* Header Buttons */
-.header-actions {
+.header-profile {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
+.header-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-profile .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-profile .icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Bottom Bar (Greeting and Buttons) */
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.greeting-picture img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Greeting */
+.header-greeting {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-left: 500px;
+  padding-top: 50px;
+}
 .btn {
-  padding: 8px 15px;
+  padding: 15px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: bold;
@@ -106,37 +161,6 @@ body {
   color: white;
 }
 
-/* User Profile Section */
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.user-profile i {
-  font-size: 1.5rem;
-  color: #555;
-  cursor: pointer;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.profile-info img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.profile-info span {
-  font-size: 1.5rem;
-  color: #333;
-  font-weight: bold;
-}
 /* Main Content */
 .main {
   grid-area: main;
@@ -163,13 +187,15 @@ body {
   margin-top: 0;
 }
 
-.project-card .actions {
+.actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  padding-top: 100px;
+  padding-left: 75%;
+  
 }
 
-.project-card .actions i {
+.actions i {
   cursor: pointer;
   color: #666;
 }
@@ -179,22 +205,22 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column; 
-  gap: 10px; 
+  flex-direction: column;
+  gap: 10px;
 }
 
 .announcement {
   padding: 10px 0;
-  border-bottom: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd;
 }
 
 .announcement:last-child {
-  border-bottom: none; 
+  border-bottom: none;
 }
 
 .announcement h4 {
   font-size: 1rem;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -207,8 +233,8 @@ body {
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  justify-self: stretch; 
-  align-self: start; 
+  justify-self: stretch;
+  align-self: start;
 }
 
 .announcements h4,
@@ -216,7 +242,7 @@ body {
   margin-top: 0;
 }
 .trending {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .trending ul {
