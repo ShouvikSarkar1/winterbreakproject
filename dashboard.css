@@ -58,11 +58,9 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   position: sticky;
   top: 0;
-  z-index: 10;
 }
 .header-top {
   display: flex;
@@ -127,9 +125,6 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 .greeting-picture img {
   width: 125px;
