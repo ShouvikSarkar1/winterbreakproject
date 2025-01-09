@@ -49,10 +49,13 @@ body {
   align-items: center;
   gap: 10px;
 }
-
+.sidebar a:hover {
+  color: #206dbb
+}
 /* Header Container */
 
 .header-top {
+  grid-area: main;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,12 +77,11 @@ body {
 /* Search Bar */
 .search-bar {
   display: flex;
-  align-items: center;
   background-color: #f1f3f4;
   border-radius: 20px;
   padding: 5px 15px;
   flex: 1;
-  max-width: 90rem;
+  max-width: 70rem;
 }
 
 .search-bar input {
@@ -155,7 +157,9 @@ body {
   background-color: #398fe6;
   color: white;
 }
-
+.header-actions button:hover{
+    background-color: #206dbb
+}
 /* Main Content */
 .main {
   grid-area: main;
@@ -194,6 +198,9 @@ body {
   cursor: pointer;
   color: #666;
 }
+.actions i:hover{
+  color:#ffcc00;
+}
 .announcements {
   background-color: #fff;
   padding: 15px;
@@ -222,7 +229,7 @@ body {
 .announcement p {
   font-size: 0.9rem;
 }
-.announcements,
+
 .trending {
   background: white;
   border-radius: 10px;
